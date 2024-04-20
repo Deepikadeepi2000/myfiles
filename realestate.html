@@ -1,0 +1,959 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>real estate</title>
+    <!--font awesome-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
+      * {
+        font-family: "Nunito", sans-serif;
+        text-transform: capitalize;
+      }
+      
+      html {
+        font-size: 62.5%;
+        overflow-x: hidden;
+        scroll-behavior: smooth;
+        scroll-padding-top: 7rem;
+      }
+      .home form .buttons-container .btn {
+        flex: 1;
+      }
+      .home form .inputbox input,
+      .home form .inputbox select {
+        flex: 1 1 25rem;
+        border: 3px solid #333;
+        box-shadow: 0.5rem 3px rgba(0, 0, 0, 0.1);
+      }
+      /* header .navbar .active{
+            clip-path: polygon(0 0, 100% 0,100% 100%,0% 100%);
+        } */
+
+        
+        /* .div1{
+            height: 200px;
+            width: 80%;
+            background-color: #fff;
+            position: absolute;
+            border-radius: 10px;
+            bottom: 0;
+            left: 10%;
+            z-index: -1;
+            box-shadow: 0 0 20px -15px #030380;
+            transition: transform 0.8s;
+        }
+        .div2{
+            height: 200px;
+            width: 64%;
+            background-color: #fff;
+            position: absolute;
+            border-radius: 10px;
+            bottom: 0;
+            left: 18%;
+            z-index: -2;
+        } */
+
+
+        /* service */
+       
+        .card-body .bg{
+    position: absolute;
+    background: blue;
+    border-radius: 100px;
+    width: 0%;
+    transition: .5s;
+}
+        .card:hover{
+    transform: rotateY(180deg);
+}
+.card-body .bg:nth-child(1){
+    height: 25%;
+    transform-origin: left;
+    top: 0%;
+    left: -30%;
+    transform: rotate(-10deg);
+   
+}
+
+.card-body .bg:nth-child(2){
+    height: 50%;
+    transform-origin: right;
+    top: 5%;
+    right: -30%;
+    transform: rotate(-10deg);
+}
+
+.card-body .bg:nth-child(3){
+    height: 50%;
+    transform-origin: left;
+    top: 70%;
+    left: -30%;
+    transform: rotate(-10deg);
+}
+
+.card:hover .card-body .bg{
+    width: 200%;
+    transition-delay: 1s;
+}
+
+.card:hover .card-body .bg:nth-child(2){
+    transition-delay: 1.5s;
+}
+
+.card:hover .card-body .bg:nth-child(3){
+    transition-delay: 1.5s;
+} 
+
+.content {
+        opacity: 0;
+        transition: opacity 0.5s;
+        z-index: 1; /* Ensure content is displayed on top */
+    }
+
+.card:hover .content{
+    opacity: 1;
+    transition-delay: 2.5s;
+} 
+        .featured .box-container{
+          display: flex;
+         flex-wrap: wrap;
+          gap: 1.5rem;
+         
+        }
+        .featured .box-container .box{
+          flex: 1 1 30;
+        }
+
+        .agents .box-container{
+          display: flex;
+         flex-wrap: wrap;
+          gap: 1.5rem; 
+        }
+        .input-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+/* Styling for input groups inside input rows */
+.input-row .input-group {
+    flex-basis: 45%;
+}
+
+/* Styling for input fields */
+input {
+    width: 95%;
+    border: none;
+    color: #353535;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+    font-family: "Plus Jakarta Sans", sans-serif;
+} 
+
+tr td:first-child {
+    font-size: 20px;
+    font-weight: 600;
+    padding-right: 20px;
+}
+
+tr td {
+    padding-top: 20px;
+}  
+
+.social-icon__link:hover {
+  transform: translateY(-10px);
+}
+.wave{  
+  position: absolute;
+  top: -100px;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: url("https://i.ibb.co/wQZVxxk/wave.png");
+  background-size: 1000px 100px;
+}
+.wave#wave1 {
+  z-index: 1000;
+  opacity: 1;
+  bottom: 0;
+  animation: animateWaves 4s linear infinite;
+}
+
+.wave#wave2 {
+  z-index: 999;
+  opacity: 0.5;
+  bottom: 10px;
+  animation: animate 4s linear infinite !important;
+}
+
+.wave#wave3 {
+  z-index: 1000;
+  opacity: 0.2;
+  bottom: 15px;
+  animation: animateWaves 3s linear infinite;
+}
+
+.wave#wave4 {
+  /* z-index: 999; */
+  opacity: 0.7;
+  bottom: 20px;
+  animation: animate 3s linear infinite;
+}
+@keyframes animateWaves {
+  0% {
+    background-position-x: 1000px;
+  }
+  100% {
+    background-positon-x: 0px;
+  }
+}
+
+@keyframes animate {
+  0% {
+    background-position-x: -1000px;
+  }
+  100% {
+    background-positon-x: 0px;
+  }
+}
+    </style>
+  </head>
+  <body >
+    <header
+      class="top-0 left-0 right-0 bg-blue-100 flex items-center justify-between "
+      style="padding: 1rem 9%; box-shadow: 0.5rem 1rem (0, 0, 0, 0.1)"
+    >
+      <a href="#" class="logo font-bold text-4xl text-gray-600  ">
+        <div class="photo -ml-36">
+          <img src="/gifvideos/icons8-real-estate-unscreen.gif" alt="">
+        </div>
+        <div class="-ml-96"><span class="text-blue-700 ">Real</span>Estate</a></div>
+        
+        
+      <nav class="navbar">
+        
+          <a
+          href="#"
+          class="text-gray-600 text-3xl hover:text-blue-500"
+          style="padding: 0 1.5rem"
+          >Home</a
+        >
+        <a
+          href="#service"
+          class="text-gray-600 text-3xl hover:text-blue-500"
+          style="padding: 0 1.5rem"
+          >Services</a
+        >
+        <a
+          href="#featured"
+          class="text-gray-600 text-3xl hover:text-blue-500"
+          style="padding: 0 1.5rem"
+          >Featured</a
+        >
+        <a
+          href="#agents"
+          class="text-gray-600 text-3xl hover:text-blue-500"
+          style="padding: 0 1.5rem"
+          >Agents</a
+        >
+        <a
+          href="#contact"
+          class="text-gray-600 text-3xl hover:text-blue-500"
+          style="padding: 0 1.5rem"
+          >Contact</a
+        >
+       
+        
+      </nav>
+      <div class="icons">
+        <div
+          id="menu-bars"
+          class="fas fa-bars h-20 w-20 rounded-lg text-center bg-blue-400"
+          style="
+            line-height: 4.5rem;
+            font-size: 2rem;
+            color: blue;
+            margin-right: 0.5rem;
+            display: none;
+          "
+        ></div>
+        <a
+          href=""
+          class="fas fa-heart h-20 w-20 rounded-lg text-center bg-blue-100"
+          style="
+            font-size: 2rem;
+            line-height: 4.5rem;
+            color: blue;
+          
+            margin-right: 0.5rem;
+          "
+        ></a>
+        <a
+          href=""
+          class="fas fa-user h-20 w-20 rounded-lg text-center bg-blue-100"
+          style="
+            font-size: 2rem;
+            line-height: 4.5rem;
+            color: blue;
+           
+            margin-right: 0.5rem;
+          "
+        ></a>
+      </div>
+    </header>
+    <!-- header section ends -->
+    <section
+      class="home bg-cover bg-center flex justify-center items-center bg-fixed"
+      id="home"
+      style="
+        padding: 1rem 9%;
+        background: url(/tailimg/holiday-4741594_1920.jpg);
+        min-height: 100vh;
+        background-repeat: no-repeat;
+      ">
+       <form
+        action=""
+        class="bg-white rounded-md p-8"
+        style="
+          width: 70rem;
+          box-shadow: 0.5rem 1rem rgba(0, 0, 0, 0.2);
+          border: 0.1rem solid rgba(0, 0, 0, 0.2);
+          margin-bottom: 40px;
+        "
+      >
+        <h3 class="text-center text-gray-600 text-4xl font-bold">
+          Find your Perfect Home
+        </h3>
+        <div class="buttons-container flex gap-8">
+          <a
+            href="#"
+            class="btn my-4 inline-block rounded-lg py-3.5 px-14 text-2xl cursor-pointer text-white bg-blue-900 hover:bg-blue-300 text-center"
+            >For Rent</a
+          >
+          <a
+            href="#"
+            class="btn my-4 inline-block rounded-lg py-3.5 px-14 text-2xl cursor-pointer text-white bg-blue-900 hover:bg-blue-300 text-center"
+            >For Sell</a
+          >
+        </div>
+        <div class="inputbox flex flex-wrap my-8" style="gap: 1.5rem">
+          <input
+            type="search"
+            name=""
+            placeholder="neighborhood"
+            id=""
+            class="bg-white text-2xl p-4 normal-case"
+          />
+          <input
+            type="search"
+            name=""
+            placeholder="city"
+            id=""
+            class="bg-white text-2xl p-4 normal-case"
+          />
+          <select name="" id="" class="bg-white text-2xl p-4 normal-case">
+            <option value="" disabled hidden selected>Minimum Price</option>
+            <option value="$5000">$5000</option>
+            <option value="$10000">$10000</option>
+            <option value="$15000">$15000</option>
+            <option value="$20000">$20000</option>
+            <option value="$25000">$25000</option>
+          </select>
+          <select name="" id="" class="bg-white text-2xl p-4 normal-case">
+            <option value="" disabled hidden selected>Maximum Price</option>
+            <option value="$5000">$5000</option>
+            <option value="$10000">$10000</option>
+            <option value="$15000">$15000</option>
+            <option value="$20000">$20000</option>
+            <option value="$25000">$25000</option>
+          </select>
+          <select name="" id="" class="bg-white text-2xl p-4 normal-case">
+            <option value="" disabled hidden selected>Property Status</option>
+            <option value="Ready to move">Ready to move</option>
+            <option value="Under Construction">Under Construction</option>
+            <option value="furnished">furnished</option>
+            <option value="semi-furnished">semi-furnished</option>
+            <option value="unfurnished">unfurnished</option>
+          </select>
+          <select name="" id="" class="bg-white text-2xl p-4 normal-case">
+            <option value="" disabled hidden selected>Property Type</option>
+            <option value="flat">flat</option>
+            <option value="house">house</option>
+            <option value="shop">Shop</option>
+            <option value="Ware-house">Ware-house</option>
+            <option value="Land">Land</option>
+          </select>
+          <select name="" id="" class="bg-white text-2xl p-4 normal-case">
+            <option value="" disabled hidden selected>BHK</option>
+            <option value="1 BHK">1 BHK</option>
+            <option value="2 BHK">2 BHK</option>
+            <option value="3 BHK">3 BHK</option>
+            <option value="4 BHK">4 BHK</option>
+            <option value="5 BHK">5 BHK</option>
+            <option value="6 BHK">6 BHK</option>
+          </select>
+          <select name="" id="" class="bg-white text-2xl p-4 normal-case">
+            <option value="" disabled hidden selected>Aminities</option>
+            <option value="Parking space">Parking space</option>
+            <option value="Swimming Pool">Swimming Pool</option>
+            <option value="Playground">Playground</option>
+            <option value="Security">Security</option>
+            <option value="All">All</option>
+          </select>
+
+          <select name="" id="" class="bg-white text-2xl p-4 normal-case">
+            <option value="" disabled hidden selected>Bedrooms</option>
+            <option value="1 bedroom">1 bedroom</option>
+            <option value="2 bedroom">2 bedroom</option>
+            <option value="3 bedroom">3 bedroom</option>
+            <option value="4 bedroom">4 bedroom</option>
+            <option value="5 bedroom">5 bedroom</option>
+          </select>
+
+          <select name="" id="" class="bg-white text-2xl p-4 normal-case">
+            <option value="" disabled hidden selected>Bathrooms</option>
+            <option value="1 bathroom">1 bathroom</option>
+            <option value="2 bathroom">2 bathroom</option>
+            <option value="3 bathroom">3 bathroom</option>
+            <option value="4 bathroom">4 bathroom</option>
+            <option value="5 bathroom">5 bathroom</option>
+          </select>
+        </div>
+        <input
+          type="submit"
+          value="search property"
+          class="btn inline-block rounded-lg py-3.5 px-14 text-2xl cursor-pointer text-white bg-blue-900 hover:bg-blue-300 w-full -mt-2"
+        />
+      </form> 
+    </section>
+
+    <!-- service section starts -->
+    <a name="service">
+    <section class="service">
+    <h1 class="heading text-center text-black text-5xl pt-12 font-bold mb-8">Our <span class="bg-blue-100 rounded-lg" style="padding: 0.2rem 1.5rem;">Services</span></h1>
+      <div class="main-card flex justify-evenly">
+     <!-- service1 -->
+     <div class="card relative" style="height: 450px; width: 300px;transform-style: preserve-3d; transition: 0.5s;">
+      
+      <div class="card-img relative w-full h-full bg-cover" style="border-radius: 20px;transform: translateZ(40px);">
+      </div>
+      <div class="card-body absolute top-2/4 left-2/4" style="transform: translate3d(-50%, -50%, -40px) rotateY(180deg);
+      width: 85%;
+      height: 87%;
+      border-radius: 20px;
+      overflow: hidden;
+      border: 5px solid gray;
+      background: url(/tailimg/buy1.png);
+      background-repeat: no-repeat;
+      background-position: center;">
+      
+          <span class="bg bg-slate-500"></span>
+          <span class="bg bg-slate-500"></span>
+          <span class="bg bg-slate-500"></span>
+          <div class="content opacity-0 relative text-center py-10 px-2.5">
+            <img class="ml-36"    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAABgklEQVR4nO3Xv2tTURgG4JMiSsFfCHYoDt3iIri4CQ6C4OZmt3ZydtM/wdXR1UkQRBBHEaIihBYnF3FxKaIIFiSDxj4SuMGQRHJzc3O9l34PhAwh5/By3vPdJKUwGzbwMnttpCbCdXzz13fcSE2BFu7gt0kHuIeVVGc4iSdme44zqY5wER/l9wmXxtaYqsoQW+iZ3+A7WyPr3MbPyoPgGO5b3EOsZmtexl5lQXAOb5VndziicRYvlh4EV/BZ+b7iWrbHkWzCHSxztPYtTx93B3tle94sO8QJPFadZzhddojzeK96H3ChrBCb+OH/6WF7kQDDy1YXD3B03hBro+OvRl5jPW+IiQdSzXzB1Vkhbk37iVBDv7LHQGs8wHE80jxPcWo0SDf7YF9z7Gfv3dEgb/AObc3Rxg46/7onjZByTK1GSBGkZlKcSM2kOJHDdCJpThFEnEg+Ua0CUlz2HKJaBaSoVg5RrQJSVCuHqFYBKaqVQ1RrSdV61YA/Vp159wohFfMHXKeS5oE9eZwAAAAASUVORK5CYII=">
+            <h1 class="mt-3 text-3xl text-white">Buying Home</h1>
+              <p class="para mt-24 text-2xl text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Non aperiam fugiat eos odit numquam vitae facere dolore id libero sit!</p>
+              <button class="bg-white text-black p-3 mt-12 text-2xl"><a href="">Learn More</a></button>
+          </div>
+           </div>   
+           </div>
+
+           <!-- service2 -->
+           <div class="card relative" style="height: 450px; width: 300px;transform-style: preserve-3d; transition: 1s;">
+              <div class="card-img relative w-full h-full bg-cover" style="border-radius: 20px;transform: translateZ(40px);"></div>
+              <div class="card-body absolute top-2/4 left-2/4" style="transform: translate3d(-50%, -50%, -40px) rotateY(180deg);
+              width: 85%;
+              height: 87%;
+              border-radius: 20px;
+              overflow: hidden;
+              border: 5px solid gray;
+              background: url(/tailimg/rent2.png);
+              background-position: center;
+              background-repeat: no-repeat;">
+              
+                  <span class="bg"></span>
+                  <span class="bg"></span>
+                  <span class="bg"></span>
+                  <div class="content opacity-0 relative text-center py-10 px-2.5">
+                    <img class="ml-36" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAACXBIWXMAAAsTAAALEwEAmpwYAAAEhklEQVR4nO2aa4hVVRTHjzo2PktLGcVXMmqIkgZKhaYmImpNA4ooSSFS40dTeggK9kGwD738GGSimA9QUVF0MNHyUb5ASYIwRdAsn2llT52fLNwH9+y79z7nvvTcM+f38d79WuvuvdZ/7X2DICMj42EAVAHLgc+AR4KWBNAd2Mt9DgI9g5YA8Axwjlx+Bp4N0gzwKvAXbv4B5gRpA2gDfEB8JC60DdIA8ASwm/z5BqgJKhngaeCsw8D/gXlAA/Cfo815YERQiQAzgD8dhl0FxmttRwOXHG3/Bl4PKgWgFfA+0OQw6Hugv6VfH+C450iIZmgTJBngUWCrx4gdwGOe/p2AzZ7+u4CuQRIBBgE/OBbepLJAa619tYr2y43PZQe959lBp4GhQZIAXgJueM7wa0b7XsC3WpvVZtoDpgO3HGP+AUwNHjbc/7XuOBZ6ARhp9HkB+MXSdhvQ3mg73KEarbvqgcK987oJN4eAHkYfX8oTvjZjBNAN2Ofps90XV8pl/ADglGdRa/VfE2gHrCQeMm4vYz6JF194+vwIDH5Qxk8CrjsWcluOhNG+L3CU/BDxNNAyd4MSUDZuAvXlNn6eMtLG70CdxVnXKIxfJQZY1jAR+M0TF0SDtCq14e2AVZ7Fnta3oBYcXc6Kixg6xnEEXSlX2AB0LJXxfSK2cKMuToDOwEZKh5TI0yzr6qwyh4uTNsWZr/FjPBodJWSqDDHkC46FIjvpjQLKbKk5JhRqfIMnZeVcXAAve8SQjbFa33Ex2jeZATbmRUtOYI4yvBpY4VnIFWPxUWKoVA4IaSadtTGedwiskC+BDlHG9waOeAaRaq231v5xYCf50aREUq0x7zJgD/BvjDFW6kfPGMdXUR7R198MYFSEB9frHgSGAWfyNH4N0K/5zDnr6AF86Mn3IVtN6az6d1BrdSE2jjI7zfV4Xrb2Ij23ArM8hYqLxT7DLYYcjjFmjnTWjuUiz7EUW+fqHVZ4qq564zHjU/KnsYB7xLga4oRZc2jj1CsbbHyuN2yrgou+C+QXGKK1qYkoSnxMsqSvCcBbKoDOkftD7fuZeY7/kx5TjLmGGHFNbPzEeusMdJXHCVOHq8/kgrJQuhjjuW6NjivtEbdwMs/2MM+uGqTsaLaWSIA3Vd4vhmpjTFeNj9r6+caXkBs26VwUlIYBxph16qaoHIggeiVpDlhgGfcp4CvKg6TQ2UlywEV5EXaMPzmisisUEVzvJMUBwneiHB1zSBZaoC41SkqSHBDuBOcrj5Kyx0ixA0J22m571HwdIx5XUuGA8IyuA560zNleKbxUOyBE0uG7ZomrlGKLcEDIR8a8rSNuo1LngFvm6y+wP00OOBnx/RXL3IUWX4lzwEWV62d4RM98y9xS5aXCAUuNy4qRwNuqLJWLi+ccmsD1RF5RDrhjS3Ux5pVrMdLggHMuCeyZc0oJXpUS4wDhMrBQnrpj/MVmScQTekU6IER+1QPAx/Lkps1RC2zx/KssNQ5wPYy8SJnIHFAsVDiZA4qFCidzQLHQ0h2QkZGRkZGREaSVu9BIZqxnX2DjAAAAAElFTkSuQmCC">
+                    <h1 class="mt-3 text-3xl text-white">Renting Home</h1>
+                      <p class="para mt-24 text-2xl text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Non aperiam fugiat eos odit numquam vitae facere dolore id libero sit!</p>
+                      <button class="bg-white text-black p-3 mt-12 text-2xl"><a href="">Learn More</a></button>
+                  </div>
+                   </div>   
+                 </div>
+
+                 <!-- service3 -->
+                 <div class="card relative" style="height: 450px; width: 300px;transform-style: preserve-3d; transition: 1s;">
+                  <div class="card-img relative w-full h-full bg-cover" style="border-radius: 20px;transform: translateZ(40px);"></div>
+                  <div class="card-body absolute top-2/4 left-2/4" style="transform: translate3d(-50%, -50%, -40px) rotateY(180deg);
+                  width: 85%;
+                  height: 87%;
+                  border-radius: 20px;
+                  overflow: hidden;
+                  border: 5px solid gray;
+                  background: url(/tailimg/sell2.png);
+                  background-repeat: no-repeat;
+                  background-position: center;
+                  ">
+                      <span class="bg"></span>
+                      <span class="bg"></span>
+                      <span class="bg"></span>
+                      <div class="content opacity-0 relative text-center py-10 px-2.5">
+                       <img class="ml-32"     src="data:image/png;base64,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">
+                        <h1 class="mt-3 text-3xl text-white">Selling Home</h1>
+                          <p class="para mt-16 text-2xl text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Non aperiam fugiat eos odit numquam vitae facere dolore id libero sit!</p>
+                          <button class="bg-white text-black text-2xl p-3 mt-12"><a href="">Learn More</a></button>
+                      </div>
+                       </div>   
+              </div>
+ 
+  </div>
+  </section>
+  </a>
+</body>
+   
+    <!-- featured section starts -->
+   <a name="featured">
+    <section class="featured" id="featured">
+      <h1 class="heading text-center text-black text-5xl pt-12 font-bold mb-5">Featured <span class="bg-blue-100 rounded-lg" style="padding: 0.2rem 1.5rem;">Properties</span></h1>
+      <div class="box-container justify-evenly mt-12">
+        <div class="box rounded-lg overflow-hidden bg-white p-8 " style="border:  1px solid rgba(0, 0, 0, 0.2); box-shadow: 0.5rem 1rem rgba(0, 0, 0, 0.1);">
+          <div class="image-container overflow-hidden relative w-full h-96 ">
+            <img src="/tailimg/hall.jpg"  class="w-full h-full object-cover hover:scale-110" style="transition: .2s linear;">
+            <div class="info absolute flex left-0 top-4">
+              <h3 class="text-xl text-white bg-gray-400 rounded-lg py-2 px-6 ml-4">3 days ago</h3>
+              <h3 class="text-xl text-white bg-gray-400 rounded-lg py-2 px-6 ml-4">for Rent</h3>
+            </div>
+            <div class="icons absolute flex right-0 bottom-4">
+              <a href="#" class="fas fa-film text-xl text-white flex rounded-lg bg-gray-400 mr-4 hover:bg-blue-300" style="padding: 0.7rem;"><h3 class="pl-2"> 2</h3></a>
+              <a href="#" class="fas fa-camera  text-xl text-white flex rounded-lg bg-gray-400 mr-4 hover:bg-blue-300" style="padding: 0.7rem;"><h3 class="pl-2"> 6</h3></a>
+            </div>
+          </div>
+          <div class="content p-6">
+            <div class="price flex items-center">
+              <h3 class="text-2xl mr-auto">25,000</h3>
+              <a href="#" class="fas fa-heart text-gray-500 text-2xl mr-4 rounded-lg text-center h-16 w-16 " style="line-height: 4rem;"></a>
+              <a href="#" class="fas fa-envelope text-gray-500 text-2xl mr-4 rounded-lg text-center h-16 w-16 " style="line-height: 4rem;""></a>
+              <a href="#" class="fas fa-phone text-gray-500 text-2xl mr-4 rounded-lg text-center h-16 w-16 " style="line-height: 4rem;""></a>
+            </div>
+          </div>
+          <div class="locations py-4 px-0">
+            <h3 class="text-4xl text-gray-600">Modern Apartments</h3>
+            <p class="text-2xl text-gray-600 leading-8 pt-5">ksnafnogognfohnohgohmgojmhojn</p>
+          </div>
+          <div class="details py-2 px-0 flex">
+            <h3 class="flex-1 p-4 text-gray-400 " style="border: .1rem solid rgba(0, 0, 0, 0.1); font-size: 1.3rem;"><i class="fas fa-expand pl-2"></i>3500 sqft</h3>
+            <h3 class="flex-1 p-4 text-gray-400 " style="border: .1rem solid rgba(0, 0, 0, 0.1); font-size: 1.3rem;"><i class="fas fa-bed pl-2"></i>2 beds</h3>
+            <h3 class="flex-1 p-4 text-gray-400 " style="border: .1rem solid rgba(0, 0, 0, 0.1); font-size: 1.3rem;"><i class="fas fa-bath pl-2"></i>3 baths</h3>
+          </div>
+          <div class="buttons flex gap-4">
+            <a href="#" class="btn  flex-1 my-4 inline-block rounded-lg py-3.5 px-14 text-2xl cursor-pointer text-white bg-blue-900 hover:bg-blue-300 text-center">Request Info</a>
+            <a href="#" class="btn  flex-1 my-4 inline-block rounded-lg py-3.5 px-14 text-2xl cursor-pointer text-white bg-blue-900 hover:bg-blue-300 text-center"> view Details</a>
+          </div>
+        </div>
+
+<!-- box2 -->
+        <div class="box rounded-lg overflow-hidden bg-white p-8 " style="border:  1px solid rgba(0, 0, 0, 0.2); box-shadow: 0.5rem 1rem rgba(0, 0, 0, 0.1);">
+          <div class="image-container overflow-hidden relative w-full h-96 ">
+            <img src="/tailimg/hall.jpg"  class="w-full h-full object-cover hover:scale-110" style="transition: .2s linear;">
+            <div class="info absolute flex left-0 top-4">
+              <h3 class="text-xl text-white bg-gray-400 rounded-lg py-2 px-6 ml-4">3 days ago</h3>
+              <h3 class="text-xl text-white bg-gray-400 rounded-lg py-2 px-6 ml-4">for sell</h3>
+            </div>
+            <div class="icons absolute flex right-0 bottom-4">
+              <a href="#" class="fas fa-film text-xl text-white flex rounded-lg bg-gray-400 mr-4 hover:bg-blue-300" style="padding: 0.7rem;"><h3 class="pl-2"> 2</h3></a>
+              <a href="#" class="fas fa-camera  text-xl text-white flex rounded-lg bg-gray-400 mr-4 hover:bg-blue-300" style="padding: 0.7rem;"><h3 class="pl-2"> 6</h3></a>
+            </div>
+          </div>
+          <div class="content p-6">
+            <div class="price flex items-center">
+              <h3 class="text-2xl mr-auto">25,000</h3>
+              <a href="#" class="fas fa-heart text-gray-500 text-2xl mr-4 rounded-lg text-center h-16 w-16 " style="line-height: 4rem;"></a>
+              <a href="#" class="fas fa-envelope text-gray-500 text-2xl mr-4 rounded-lg text-center h-16 w-16 " style="line-height: 4rem;""></a>
+              <a href="#" class="fas fa-phone text-gray-500 text-2xl mr-4 rounded-lg text-center h-16 w-16 " style="line-height: 4rem;""></a>
+            </div>
+          </div>
+          <div class="locations py-4 px-0">
+            <h3 class="text-4xl text-gray-600">Modern Apartments</h3>
+            <p class="text-2xl text-gray-600 leading-8 pt-5">ksnafnogognfohnohgohmgojmhojn</p>
+          </div>
+          <div class="details py-2 px-0 flex">
+            <h3 class="flex-1 p-4 text-gray-400 " style="border: .1rem solid rgba(0, 0, 0, 0.1); font-size: 1.3rem;"><i class="fas fa-expand pl-2"></i>3500 sqft</h3>
+            <h3 class="flex-1 p-4 text-gray-400 " style="border: .1rem solid rgba(0, 0, 0, 0.1); font-size: 1.3rem;"><i class="fas fa-bed pl-2"></i>2 beds</h3>
+            <h3 class="flex-1 p-4 text-gray-400 " style="border: .1rem solid rgba(0, 0, 0, 0.1); font-size: 1.3rem;"><i class="fas fa-bath pl-2"></i>3 baths</h3>
+          </div>
+          <div class="buttons flex gap-4">
+            <a href="#" class="btn  flex-1 my-4 inline-block rounded-lg py-3.5 px-14 text-2xl cursor-pointer text-white bg-blue-900 hover:bg-blue-300 text-center">Request Info</a>
+            <a href="#" class="btn  flex-1 my-4 inline-block rounded-lg py-3.5 px-14 text-2xl cursor-pointer text-white bg-blue-900 hover:bg-blue-300 text-center"> view Details</a>
+          </div>
+        </div>
+
+<!-- box3 -->
+        <div class="box rounded-lg overflow-hidden bg-white p-8 " style="border:  1px solid rgba(0, 0, 0, 0.2); box-shadow: 0.5rem 1rem rgba(0, 0, 0, 0.1);">
+          <div class="image-container overflow-hidden relative w-full h-96 ">
+            <img src="/tailimg/hall.jpg"  class="w-full h-full object-cover hover:scale-110" style="transition: .2s linear;">
+            <div class="info absolute flex left-0 top-4">
+              <h3 class="text-xl text-white bg-gray-400 rounded-lg py-2 px-6 ml-4">3 days ago</h3>
+              <h3 class="text-xl text-white bg-gray-400 rounded-lg py-2 px-6 ml-4">for Rent</h3>
+            </div>
+            <div class="icons absolute flex right-0 bottom-4">
+              <a href="#" class="fas fa-film text-xl text-white flex rounded-lg bg-gray-400 mr-4 hover:bg-blue-300" style="padding: 0.7rem;"><h3 class="pl-2"> 2</h3></a>
+              <a href="#" class="fas fa-camera  text-xl text-white flex rounded-lg bg-gray-400 mr-4 hover:bg-blue-300" style="padding: 0.7rem;"><h3 class="pl-2"> 6</h3></a>
+            </div>
+          </div>
+          <div class="content p-6">
+            <div class="price flex items-center">
+              <h3 class="text-2xl mr-auto">25,000</h3>
+              <a href="#" class="fas fa-heart text-gray-500 text-2xl mr-4 rounded-lg text-center h-16 w-16 " style="line-height: 4rem;"></a>
+              <a href="#" class="fas fa-envelope text-gray-500 text-2xl mr-4 rounded-lg text-center h-16 w-16 " style="line-height: 4rem;""></a>
+              <a href="#" class="fas fa-phone text-gray-500 text-2xl mr-4 rounded-lg text-center h-16 w-16 " style="line-height: 4rem;""></a>
+            </div>
+          </div>
+          <div class="locations py-4 px-0">
+            <h3 class="text-4xl text-gray-600">Modern Apartments</h3>
+            <p class="text-2xl text-gray-600 leading-8 pt-5">ksnafnogognfohnohgohmgojmhojn</p>
+          </div>
+          <div class="details py-2 px-0 flex">
+            <h3 class="flex-1 p-4 text-gray-400 " style="border: .1rem solid rgba(0, 0, 0, 0.1); font-size: 1.3rem;"><i class="fas fa-expand pl-2"></i>3500 sqft</h3>
+            <h3 class="flex-1 p-4 text-gray-400 " style="border: .1rem solid rgba(0, 0, 0, 0.1); font-size: 1.3rem;"><i class="fas fa-bed pl-2"></i>2 beds</h3>
+            <h3 class="flex-1 p-4 text-gray-400 " style="border: .1rem solid rgba(0, 0, 0, 0.1); font-size: 1.3rem;"><i class="fas fa-bath pl-2"></i>3 baths</h3>
+          </div>
+          <div class="buttons flex gap-4">
+            <a href="#" class="btn  flex-1 my-4 inline-block rounded-lg py-3.5 px-14 text-2xl cursor-pointer text-white bg-blue-900 hover:bg-blue-300 text-center">Request Info</a>
+            <a href="#" class="btn  flex-1 my-4 inline-block rounded-lg py-3.5 px-14 text-2xl cursor-pointer text-white bg-blue-900 hover:bg-blue-300 text-center"> view Details</a>
+          </div>
+        </div>
+<!-- box4 -->
+        <div class="box rounded-lg overflow-hidden bg-white p-8 " style="border:  1px solid rgba(0, 0, 0, 0.2); box-shadow: 0.5rem 1rem rgba(0, 0, 0, 0.1);">
+          <div class="image-container overflow-hidden relative w-full h-96 ">
+            <img src="/tailimg/hall.jpg"  class="w-full h-full object-cover hover:scale-110" style="transition: .2s linear;">
+            <div class="info absolute flex left-0 top-4">
+              <h3 class="text-xl text-white bg-gray-400 rounded-lg py-2 px-6 ml-4">3 days ago</h3>
+              <h3 class="text-xl text-white bg-gray-400 rounded-lg py-2 px-6 ml-4">for Rent</h3>
+            </div>
+            <div class="icons absolute flex right-0 bottom-4">
+              <a href="#" class="fas fa-film text-xl text-white flex rounded-lg bg-gray-400 mr-4 hover:bg-blue-300" style="padding: 0.7rem;"><h3 class="pl-2"> 2</h3></a>
+              <a href="#" class="fas fa-camera  text-xl text-white flex rounded-lg bg-gray-400 mr-4 hover:bg-blue-300" style="padding: 0.7rem;"><h3 class="pl-2"> 6</h3></a>
+            </div>
+          </div>
+          <div class="content p-6">
+            <div class="price flex items-center">
+              <h3 class="text-2xl mr-auto">25,000</h3>
+              <a href="#" class="fas fa-heart text-gray-500 text-2xl mr-4 rounded-lg text-center h-16 w-16 " style="line-height: 4rem;"></a>
+              <a href="#" class="fas fa-envelope text-gray-500 text-2xl mr-4 rounded-lg text-center h-16 w-16 " style="line-height: 4rem;""></a>
+              <a href="#" class="fas fa-phone text-gray-500 text-2xl mr-4 rounded-lg text-center h-16 w-16 " style="line-height: 4rem;""></a>
+            </div>
+          </div>
+          <div class="locations py-4 px-0">
+            <h3 class="text-4xl text-gray-600">Modern Apartments</h3>
+            <p class="text-2xl text-gray-600 leading-8 pt-5">ksnafnogognfohnohgohmgojmhojn</p>
+          </div>
+          <div class="details py-2 px-0 flex">
+            <h3 class="flex-1 p-4 text-gray-400 " style="border: .1rem solid rgba(0, 0, 0, 0.1); font-size: 1.3rem;"><i class="fas fa-expand pl-2"></i>3500 sqft</h3>
+            <h3 class="flex-1 p-4 text-gray-400 " style="border: .1rem solid rgba(0, 0, 0, 0.1); font-size: 1.3rem;"><i class="fas fa-bed pl-2"></i>2 beds</h3>
+            <h3 class="flex-1 p-4 text-gray-400 " style="border: .1rem solid rgba(0, 0, 0, 0.1); font-size: 1.3rem;"><i class="fas fa-bath pl-2"></i>3 baths</h3>
+          </div>
+          <div class="buttons flex gap-4">
+            <a href="#" class="btn  flex-1 my-4 inline-block rounded-lg py-3.5 px-14 text-2xl cursor-pointer text-white bg-blue-900 hover:bg-blue-300 text-center">Request Info</a>
+            <a href="#" class="btn  flex-1 my-4 inline-block rounded-lg py-3.5 px-14 text-2xl cursor-pointer text-white bg-blue-900 hover:bg-blue-300 text-center"> view Details</a>
+          </div>
+        </div>
+
+        <!-- box5 -->
+
+        <div class="box rounded-lg overflow-hidden bg-white p-8 " style="border:  1px solid rgba(0, 0, 0, 0.2); box-shadow: 0.5rem 1rem rgba(0, 0, 0, 0.1);">
+          <div class="image-container overflow-hidden relative w-full h-96 ">
+            <img src="/tailimg/hall.jpg"  class="w-full h-full object-cover hover:scale-110" style="transition: .2s linear;">
+            <div class="info absolute flex left-0 top-4">
+              <h3 class="text-xl text-white bg-gray-400 rounded-lg py-2 px-6 ml-4">3 days ago</h3>
+              <h3 class="text-xl text-white bg-gray-400 rounded-lg py-2 px-6 ml-4">for Rent</h3>
+            </div>
+            <div class="icons absolute flex right-0 bottom-4">
+              <a href="#" class="fas fa-film text-xl text-white flex rounded-lg bg-gray-400 mr-4 hover:bg-blue-300" style="padding: 0.7rem;"><h3 class="pl-2"> 2</h3></a>
+              <a href="#" class="fas fa-camera  text-xl text-white flex rounded-lg bg-gray-400 mr-4 hover:bg-blue-300" style="padding: 0.7rem;"><h3 class="pl-2"> 6</h3></a>
+            </div>
+          </div>
+          <div class="content p-6">
+            <div class="price flex items-center">
+              <h3 class="text-2xl mr-auto">25,000</h3>
+              <a href="#" class="fas fa-heart text-gray-500 text-2xl mr-4 rounded-lg text-center h-16 w-16 " style="line-height: 4rem;"></a>
+              <a href="#" class="fas fa-envelope text-gray-500 text-2xl mr-4 rounded-lg text-center h-16 w-16 " style="line-height: 4rem;""></a>
+              <a href="#" class="fas fa-phone text-gray-500 text-2xl mr-4 rounded-lg text-center h-16 w-16 " style="line-height: 4rem;""></a>
+            </div>
+          </div>
+          <div class="locations py-4 px-0">
+            <h3 class="text-4xl text-gray-600">Modern Apartments</h3>
+            <p class="text-2xl text-gray-600 leading-8 pt-5">ksnafnogognfohnohgohmgojmhojn</p>
+          </div>
+          <div class="details py-2 px-0 flex">
+            <h3 class="flex-1 p-4 text-gray-400 " style="border: .1rem solid rgba(0, 0, 0, 0.1); font-size: 1.3rem;"><i class="fas fa-expand pl-2"></i>3500 sqft</h3>
+            <h3 class="flex-1 p-4 text-gray-400 " style="border: .1rem solid rgba(0, 0, 0, 0.1); font-size: 1.3rem;"><i class="fas fa-bed pl-2"></i>2 beds</h3>
+            <h3 class="flex-1 p-4 text-gray-400 " style="border: .1rem solid rgba(0, 0, 0, 0.1); font-size: 1.3rem;"><i class="fas fa-bath pl-2"></i>3 baths</h3>
+          </div>
+          <div class="buttons flex gap-4">
+            <a href="#" class="btn  flex-1 my-4 inline-block rounded-lg py-3.5 px-14 text-2xl cursor-pointer text-white bg-blue-900 hover:bg-blue-300 text-center">Request Info</a>
+            <a href="#" class="btn  flex-1 my-4 inline-block rounded-lg py-3.5 px-14 text-2xl cursor-pointer text-white bg-blue-900 hover:bg-blue-300 text-center"> view Details</a>
+          </div>
+        </div>
+<!-- box6 -->
+        <div class="box rounded-lg overflow-hidden bg-white p-8 " style="border:  1px solid rgba(0, 0, 0, 0.2); box-shadow: 0.5rem 1rem rgba(0, 0, 0, 0.1);">
+          <div class="image-container overflow-hidden relative w-full h-96 ">
+            <img src="/tailimg/hall.jpg"  class="w-full h-full object-cover hover:scale-110" style="transition: .2s linear;">
+            <div class="info absolute flex left-0 top-4">
+              <h3 class="text-xl text-white bg-gray-400 rounded-lg py-2 px-6 ml-4">3 days ago</h3>
+              <h3 class="text-xl text-white bg-gray-400 rounded-lg py-2 px-6 ml-4">for Rent</h3>
+            </div>
+            <div class="icons absolute flex right-0 bottom-4">
+              <a href="#" class="fas fa-film text-xl text-white flex rounded-lg bg-gray-400 mr-4 hover:bg-blue-300" style="padding: 0.7rem;"><h3 class="pl-2"> 2</h3></a>
+              <a href="#" class="fas fa-camera  text-xl text-white flex rounded-lg bg-gray-400 mr-4 hover:bg-blue-300" style="padding: 0.7rem;"><h3 class="pl-2"> 6</h3></a>
+            </div>
+          </div>
+          <div class="content p-6">
+            <div class="price flex items-center">
+              <h3 class="text-2xl mr-auto">25,000</h3>
+              <a href="#" class="fas fa-heart text-gray-500 text-2xl mr-4 rounded-lg text-center h-16 w-16 " style="line-height: 4rem;"></a>
+              <a href="#" class="fas fa-envelope text-gray-500 text-2xl mr-4 rounded-lg text-center h-16 w-16 " style="line-height: 4rem;""></a>
+              <a href="#" class="fas fa-phone text-gray-500 text-2xl mr-4 rounded-lg text-center h-16 w-16 " style="line-height: 4rem;""></a>
+            </div>
+          </div>
+          <div class="locations py-4 px-0">
+            <h3 class="text-4xl text-gray-600">Modern Apartments</h3>
+            <p class="text-2xl text-gray-600 leading-8 pt-5">ksnafnogognfohnohgohmgojmhojn</p>
+          </div>
+          <div class="details py-2 px-0 flex">
+            <h3 class="flex-1 p-4 text-gray-400 " style="border: .1rem solid rgba(0, 0, 0, 0.1); font-size: 1.3rem;"><i class="fas fa-expand pl-2"></i>3500 sqft</h3>
+            <h3 class="flex-1 p-4 text-gray-400 " style="border: .1rem solid rgba(0, 0, 0, 0.1); font-size: 1.3rem;"><i class="fas fa-bed pl-2"></i>2 beds</h3>
+            <h3 class="flex-1 p-4 text-gray-400 " style="border: .1rem solid rgba(0, 0, 0, 0.1); font-size: 1.3rem;"><i class="fas fa-bath pl-2"></i>3 baths</h3>
+          </div>
+          <div class="buttons flex gap-4">
+            <a href="#" class="btn  flex-1 my-4 inline-block rounded-lg py-3.5 px-14 text-2xl cursor-pointer text-white bg-blue-900 hover:bg-blue-300 text-center">Request Info</a>
+            <a href="#" class="btn  flex-1 my-4 inline-block rounded-lg py-3.5 px-14 text-2xl cursor-pointer text-white bg-blue-900 hover:bg-blue-300 text-center"> view Details</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    </a>
+
+    <!-- agents section starts -->
+    <a name="agents">
+    <section class="agents" id="agents">
+      <h1 class="heading text-center text-black text-5xl pt-12 font-bold">Professional <span class="bg-blue-100 rounded-lg" style="padding: 0.2rem 1.5rem;">Agents</span></h1>
+
+      <div class="box-container justify-evenly mt-14">
+        <div class="box p-8 bg-white text-center rounded-lg relative ml-11" style="border: .1rem solid rgba(0, 0, 0, 0.2); box-shadow: 0.5rem 1rem rgba(0, 0, 0, 0.1); width: 26rem;">
+          <a href="#" class="fas fa-envelope absolute top-7 left-8 text-xl text-gray-600 hover:text-red-400"></a>
+          <a href="#" class="fas fa-phone absolute top-7 right-8 text-xl text-gray-600 hover:text-red-400"></a>
+          <img src="/tailimg/agent1.jpg" class="object-cover h-40 w-40 my-4 mx-0 ml-24 " style="border-radius: 50%; box-shadow: 0 0 0 .5rem rgba(0, 0, 0, 0.1);">
+          <h3 class="text-3xl text-gray-600">John Doe</h3>
+          <span class="text-2xl text-red-500 ">Agent</span>
+          <div class="share mt-5">
+            <a href="#" class="fab fa-facebook-f h-16 w-16 rounded-lg bg-slate-50 text-gray-600 text-2xl hover:text-red-500" style="margin: 0 .3rem; line-height: 4rem;"></a>
+            <a href="#" class="fab fa-twitter h-16 w-16 rounded-lg bg-slate-50 text-gray-600 text-2xl hover:text-red-500" style="margin: 0 .3rem; line-height: 4rem;"></a>
+            <a href="#" class="fab fa-instagram h-16 w-16 rounded-lg bg-slate-50 text-gray-600 text-2xl hover:text-red-500" style="margin: 0 .3rem; line-height: 4rem;"></a>
+            <a href="#" class="fab fa-linkedin h-16 w-16 rounded-lg bg-slate-50 text-gray-600 text-2xl hover:text-red-500" style="margin: 0 .3rem; line-height: 4rem;"></a>
+          </div>
+        </div>
+        <!-- div1 -->
+        <div class="box p-8 bg-white text-center rounded-lg relative ml-11" style="border: .1rem solid rgba(0, 0, 0, 0.2); box-shadow: 0.5rem 1rem rgba(0, 0, 0, 0.1); width: 26rem;">
+          <a href="#" class="fas fa-envelope absolute top-7 left-8 text-xl text-gray-600 hover:text-red-400"></a>
+          <a href="#" class="fas fa-phone absolute top-7 right-8 text-xl text-gray-600 hover:text-red-400"></a>
+          <img src="/tailimg/agent2.avif" class="object-cover h-40 w-40 my-4 mx-0 ml-24 " style="border-radius: 50%; box-shadow: 0 0 0 .5rem rgba(0, 0, 0, 0.1);">
+          <h3 class="text-3xl text-gray-600">John Doe</h3>
+          <span class="text-2xl text-red-500 ">Agent</span>
+          <div class="share mt-5">
+            <a href="#" class="fab fa-facebook-f h-16 w-16 rounded-lg bg-slate-50 text-gray-600 text-2xl hover:text-red-500" style="margin: 0 .3rem; line-height: 4rem;"></a>
+            <a href="#" class="fab fa-twitter h-16 w-16 rounded-lg bg-slate-50 text-gray-600 text-2xl hover:text-red-500" style="margin: 0 .3rem; line-height: 4rem;"></a>
+            <a href="#" class="fab fa-instagram h-16 w-16 rounded-lg bg-slate-50 text-gray-600 text-2xl hover:text-red-500" style="margin: 0 .3rem; line-height: 4rem;"></a>
+            <a href="#" class="fab fa-linkedin h-16 w-16 rounded-lg bg-slate-50 text-gray-600 text-2xl hover:text-red-500" style="margin: 0 .3rem; line-height: 4rem;"></a>
+          </div>
+        </div>
+        <!-- div2 -->
+        <div class="box p-8 bg-white text-center rounded-lg relative ml-11" style="border: .1rem solid rgba(0, 0, 0, 0.2); box-shadow: 0.5rem 1rem rgba(0, 0, 0, 0.1); width: 26rem;">
+          <a href="#" class="fas fa-envelope absolute top-7 left-8 text-xl text-gray-600 hover:text-red-400"></a>
+          <a href="#" class="fas fa-phone absolute top-7 right-8 text-xl text-gray-600 hover:text-red-400"></a>
+          <img src="/tailimg/agent3.jpg" class="object-cover h-40 w-40 my-4 mx-0 ml-24 " style="border-radius: 50%; box-shadow: 0 0 0 .5rem rgba(0, 0, 0, 0.1);">
+          <h3 class="text-3xl text-gray-600">John Doe</h3>
+          <span class="text-2xl text-red-500 ">Agent</span>
+          <div class="share mt-5">
+            <a href="#" class="fab fa-facebook-f h-16 w-16 rounded-lg bg-slate-50 text-gray-600 text-2xl hover:text-red-500" style="margin: 0 .3rem; line-height: 4rem;"></a>
+            <a href="#" class="fab fa-twitter h-16 w-16 rounded-lg bg-slate-50 text-gray-600 text-2xl hover:text-red-500" style="margin: 0 .3rem; line-height: 4rem;"></a>
+            <a href="#" class="fab fa-instagram h-16 w-16 rounded-lg bg-slate-50 text-gray-600 text-2xl hover:text-red-500" style="margin: 0 .3rem; line-height: 4rem;"></a>
+            <a href="#" class="fab fa-linkedin h-16 w-16 rounded-lg bg-slate-50 text-gray-600 text-2xl hover:text-red-500" style="margin: 0 .3rem; line-height: 4rem;"></a>
+          </div>
+        </div>
+        <!-- div3 -->
+        <div class="box p-8 bg-white text-center rounded-lg relative ml-11" style="border: .1rem solid rgba(0, 0, 0, 0.2); box-shadow: 0.5rem 1rem rgba(0, 0, 0, 0.1); width: 26rem;">
+          <a href="#" class="fas fa-envelope absolute top-7 left-8 text-xl text-gray-600 hover:text-red-400"></a>
+          <a href="#" class="fas fa-phone absolute top-7 right-8 text-xl text-gray-600 hover:text-red-400"></a>
+          <img src="/tailimg/agent4.avif" class="object-cover h-40 w-40 my-4 mx-0 ml-24 " style="border-radius: 50%; box-shadow: 0 0 0 .5rem rgba(0, 0, 0, 0.1);">
+          <h3 class="text-3xl text-gray-600">John Doe</h3>
+          <span class="text-2xl text-red-500 ">Agent</span>
+          <div class="share mt-5">
+            <a href="#" class="fab fa-facebook-f h-16 w-16 rounded-lg bg-slate-50 text-gray-600 text-2xl hover:text-red-500" style="margin: 0 .3rem; line-height: 4rem;"></a>
+            <a href="#" class="fab fa-twitter h-16 w-16 rounded-lg bg-slate-50 text-gray-600 text-2xl hover:text-red-500" style="margin: 0 .3rem; line-height: 4rem;"></a>
+            <a href="#" class="fab fa-instagram h-16 w-16 rounded-lg bg-slate-50 text-gray-600 text-2xl hover:text-red-500" style="margin: 0 .3rem; line-height: 4rem;"></a>
+            <a href="#" class="fab fa-linkedin h-16 w-16 rounded-lg bg-slate-50 text-gray-600 text-2xl hover:text-red-500" style="margin: 0 .3rem; line-height: 4rem;"></a>
+          </div>
+        </div>
+      </div>
+    </section>
+    </a>
+
+    <!-- contact section starts -->
+    <a name="contact">
+    <section class="contact" id="contact mt-10">
+      <div class="container w-4/5" style="margin: 50px auto;">
+        <h1 class="text-center text-black text-5xl font-extrabold mt-2.5">Get in Touch</h1>
+        <p class="text-center text-black text-3xl mt-5">Fill up the form to get in touch with us. </p>
+
+        <!-- Contact form section -->
+        <div class="contact-box bg-blue-100 flex mt-5" style="border-radius: 20px;">
+            <!-- Left side of the form -->
+            <div class="container-left basis-3/5" style="padding: 40px 60px;">
+                <h3 class="text-3xl mb-5">Fill the Form*</h3>
+                <!-- Form -->
+                <form id="contactForm" onsubmit="return validateForm()">
+                    <div class="input-row">
+                        <div class="input-group">
+                            <label class="mb-2.5 text-2xl font-semibold block">Name*</label>
+                            <input type="text" id="name" placeholder="Enter your Name" required>
+                        </div>
+
+                        <div class="input-group">
+                            <label class="mb-2.5 text-2xl font-semibold block">Phone*</label>
+                            <input type="text" id="phone" placeholder="+91 1234567890" required>
+                        </div>
+                    </div>
+                    
+                    <!-- Input row for Email and Subject -->
+                    <div class="input-row">
+                        <div class="input-group">
+                            <label class="mb-2.5 text-2xl font-semibold block">Email*</label>
+                            <input type="email" id="email" placeholder="youremail@gmail.com" required>
+                        </div>
+
+                        <div class="input-group">
+                            <label class="mb-2.5 text-2xl font-semibold block">Subject</label>
+                            <input type="text" id="subject" placeholder="Inquiry">
+                        </div>                       
+                    </div>
+
+                    <!-- Label for Message textarea -->
+                    <label class="mb-2.5 text-2xl font-semibold block">Message*</label>
+                    <textarea rows="10" id="message" placeholder="Enter your Message" class="text-base w-full outline-none rounded-lg p-2.5" style="box-sizing: border-box; border: 1px solid #ccc;" required></textarea>
+                    <button type="submit" class="font-semibold text-xl bg-black border-none outline-none text-white   mt-5 rounded" style=" transition: all 0.5s ease 0s;  box-shadow: 0px 5px 10px 0px #0000003a; width: 120px; height: 40px;">SEND MESSAGE</button>
+                </form>
+            </div>
+            <!-- Right side with contact information -->
+            <div class="container-right basis-2/5 text-black" style="padding: 40px 60px; background: hsl(207,95%,55%); border-radius: 0px 20px 20px 0px;">
+                <h3 class="text-4xl mb-5">Reach Us</h3>
+                <!-- Table for contact information -->
+                <table>
+                    <tr>
+                        <td>Email: </td>
+                        <td>contact@msijanakpuri.com</td>
+                    </tr>
+
+                    <tr>
+                        <td>Phone: </td>
+                        <td>+91 011-45656183</td>
+                    </tr>
+
+                    <tr>
+                        <td>Address: </td>
+                        <td>Maharaja Surajmail Institute <br>
+                            C-4, Janakpuri, <br>
+                            Delhi - 110058, India</td>
+                    </tr>
+                </table>
+                
+                <!-- Map section -->
+                <div class="map">
+                    <!-- Google Map iframe -->
+                    <iframe class="w-full border-none outline-none mt-10 rounded-md" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d125406.03875514475!2d78.60662480979316!3d10.816002351358756!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3baaf50ff2aecdad%3A0x6de02c3bedbbaea6!2sTiruchirappalli%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1713090984777!5m2!1sen!2sin" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </div>
+    </section>
+    </a>
+
+
+    <!-- footer section starts -->
+    <footer class="footer relative w-full min-h-24 flex justify-center items-center flex-col bg-blue-500 mt-52" style="padding: 20px 50px;">
+      <div class="waves">
+        <div class="wave"  id="wave1"></div>
+        <div class="wave"  id="wave2"></div>
+        <div class="wave"  id="wave3"></div>
+        <div class="wave"  id="wave4"></div>
+      </div>
+      <ul class="social-icon relative flex justify-center items-center my-2.5 mx-0 flex-wrap">
+        <li class="social-icon__item list-none"><a class="social-icon__link text-white my-0 mx-2.5 inline-block text-5xl" style="transition: 0.5s;" href="#">
+            <ion-icon name="logo-facebook"></ion-icon>
+          </a></li>
+        <li class="social-icon__item list-none"><a class="social-icon__link text-white my-0 mx-2.5 inline-block text-5xl" style="transition: 0.5s;" href="#">
+            <ion-icon name="logo-twitter"></ion-icon>
+          </a></li>
+        <li class="social-icon__item list-none"><a class="social-icon__link text-white my-0 mx-2.5 inline-block text-5xl" style="transition: 0.5s;" href="#">
+            <ion-icon name="logo-linkedin"></ion-icon>
+          </a></li>
+        <li class="social-icon__item list-none"><a class="social-icon__link text-white my-0 mx-2.5 inline-block text-5xl" style="transition: 0.5s;" href="#">
+            <ion-icon name="logo-instagram"></ion-icon>
+          </a></li>
+      </ul>
+      <ul class="menu relative flex justify-center items-center my-2.5 mx-0 flex-wrap">
+        <li class="menu__item list-none"><a class="menu__link text-white my-0 mx-2.5 inline-block no-underline font-light text-3xl opacity-75 hover:opacity-100" style="transition: 0.5s;" href="#">Home</a></li>
+        <li class="menu__item list-none"><a class="menu__link text-white my-0 mx-2.5 inline-block no-underline font-light text-3xl opacity-75 hover:opacity-100" style="transition: 0.5s;" href="#">Service</a></li>
+        <li class="menu__item list-none"><a class="menu__link text-white my-0 mx-2.5 inline-block no-underline font-light text-3xl opacity-75 hover:opacity-100" style="transition: 0.5s;" href="#">Featured Properties</a></li>
+        <li class="menu__item list-none"><a class="menu__link text-white my-0 mx-2.5 inline-block no-underline font-light text-3xl opacity-75 hover:opacity-100" style="transition: 0.5s;" href="#">Agents</a></li>
+        <li class="menu__item list-none"><a class="menu__link text-white my-0 mx-2.5 inline-block no-underline font-light text-3xl opacity-75 hover:opacity-100" style="transition: 0.5s;" href="#">Contact Us</a></li>
+  
+      </ul>
+  
+      <ul class="menu relative flex justify-center items-center my-2.5 mx-0 flex-wrap">
+          <li class="menu__item list-none"><a class="menu__link text-white my-0 mx-2.5 inline-block no-underline text-2xl font-light opacity-75 hover:opacity-100" style="transition: 0.5s;" href="#">India</a></li>
+          <li class="menu__item list-none"><a class="menu__link text-white my-0 mx-2.5 inline-block no-underline text-2xl font-light opacity-75 hover:opacity-100" style="transition: 0.5s;" href="#">Japan</a></li>
+          <li class="menu__item list-none"><a class="menu__link text-white my-0 mx-2.5 inline-block no-underline text-2xl font-light opacity-75 hover:opacity-100" style="transition: 0.5s;" href="#">USA</a></li>
+          <li class="menu__item list-none"><a class="menu__link text-white my-0 mx-2.5 inline-block no-underline text-2xl font-light opacity-75 hover:opacity-100" style="transition: 0.5s;" href="#">Russia</a></li>
+          <li class="menu__item list-none"><a class="menu__link text-white my-0 mx-2.5 inline-block no-underline text-2xl font-light opacity-75 hover:opacity-100" style="transition: 0.5s;" href="#">France</a></li>
+    
+        </ul>
+      <p class="mt-3.5 mr-0 mb-2.5 ml-0 text-white text-sm font-light">&copy;2021 Nadine Coelho | All Rights Reserved</p>
+    </footer>
+
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script> 
+   <script>
+      let menu = document.querySelector("#menu-bars");
+      let navbar = document.querySelector(".navbar");
+      menu.onClick = () => {
+        navbar.classList.toggle("active");
+      };
+    </script>
+  </body>
+</html>
